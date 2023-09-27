@@ -51,9 +51,15 @@ function reverseV2(n) {
 
   return result
 
-}
+} 
 
-console.log(reverseV2(number))
+// I can also get the last digits by using modulo 10 then divided by 1 will give me the last number
+// If i multiple the modulo and the divider by 10 i will get the second to last number
+// If i multiply as many times as there are digits, i will get all the numbers starting from the bottom
+// How can i combine them into a number without using strings?
+console.log(Math.floor((1234 % 10) /1))
+
+//console.log(reverseV2(number))
 
 //console.log(reverse(number));
 
