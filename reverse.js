@@ -1,7 +1,7 @@
 // Reverse a number without using helper functions
 // Turn 123 to 321 for example
 
-let number = 1234567890;
+let number = 1234;
 
 function returnLength(num) {
   if (num == 0) {
@@ -40,7 +40,22 @@ function reverse(n) {
   return result
 }
 
-console.log(reverse(number));
+function reverseV2(n) {
+  let result = ""
+  const lengthOriginal = returnLength(n);
+  const stringNum = n.toString()
+
+  for (let i = 1; i <= lengthOriginal; i ++) {
+    result += stringNum[lengthOriginal - i]
+  }
+
+  return result
+
+}
+
+console.log(reverseV2(number))
+
+//console.log(reverse(number));
 
 //console.log(returnLength("0"));
 
