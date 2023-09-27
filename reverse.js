@@ -19,7 +19,7 @@ function returnLength(num) {
 
 function reverse(n) {
   let reversed = [];
-  let result = ""
+  let result = "";
   const lengthOriginal = returnLength(n);
   let modifier = 10;
 
@@ -32,33 +32,43 @@ function reverse(n) {
     modifier *= 10;
   }
 
-  let arrayLength = reversed.length
+  let arrayLength = reversed.length;
 
   for (let i = 0; i < arrayLength; i++) {
-    result += reversed[i]
+    result += reversed[i];
   }
-  return result
+  return result;
 }
 
 function reverseV2(n) {
-  let result = ""
+  let result = "";
   const lengthOriginal = returnLength(n);
-  const stringNum = n.toString()
+  const stringNum = n.toString();
 
-  for (let i = 1; i <= lengthOriginal; i ++) {
-    result += stringNum[lengthOriginal - i]
+  for (let i = 1; i <= lengthOriginal; i++) {
+    result += stringNum[lengthOriginal - i];
   }
 
-  return result
-
-} 
+  return result;
+}
 
 // I can also get the last digits by using modulo 10 then divided by 1 will give me the last number
 // If i multiple the modulo and the divider by 10 i will get the second to last number
 // If i multiply as many times as there are digits, i will get all the numbers starting from the bottom
 // How can i combine them into a number without using strings?
-console.log(Math.floor((1234 % 10) /1))
+//console.log(Math.floor((1234 % 10) / 1));
 
+function reverseV3(n) {
+  let reversed = 0
+  while (n > 0) {
+    lastDigit = Math.floor(n % 10);
+    reversed = reversed * 10 + lastDigit
+    n = Math.floor(n / 10);
+  }
+  return reversed
+}
+
+console.log(reverseV3(number))
 //console.log(reverseV2(number))
 
 //console.log(reverse(number));
