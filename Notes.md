@@ -72,10 +72,6 @@ if else
 
 # Reverse a number 112 to 211 with JS
 
-odzemi 100 den
-debt: 2900 den
-
-
 
 
 

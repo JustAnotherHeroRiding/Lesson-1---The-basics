@@ -65,6 +65,8 @@ function reverseV3(n) {
     // I guess not, maybe for floats only
     //lastDigit = Math.floor(n % 10);
 
+    // 1234
+
     // So here we get the modulo, so 1234 % 10 will return 4 which is the last digit
     lastDigit = n % 10;
     // On the first run this will be 0 * 10 + 4
